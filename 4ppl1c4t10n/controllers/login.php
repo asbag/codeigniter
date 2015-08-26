@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 	function validate_login() {
 		//Username is required
 		$this->form_validation->set_rules('username', 'Username', 'trim|required'); 
-		$this->form_validation->set_rules('password', 'Password', 'trim|require');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 		
 		if ($this->form_validation->run() == FALSE) {
 			$this->index();
